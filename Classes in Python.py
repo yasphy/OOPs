@@ -47,4 +47,36 @@ class Main:
     def __init__(self, name):
         self.name = name  # creating instance variables
  #Any change in class variable is reflected in all object and hence,should be used carefully
+#Python program to create a Vehicle class with max_speed and mileage instance attributes.
+class Vehicle:
+    max_speed=None
+    mileage=None
+ #Method
+class Job:
+    def __init__(self,ID=None,Salary=None,place=None):
+        self.ID=ID
+        self.Salary=Salary
+        #By default, all the python attributes are public but can be made private specifically and can't be accessed outside the class
+        self.__place=place #Private attribute
+'''For accessing place
+Yash(17877,320000,India)
+print(Yash._Job__place)'''
+    def inhand():
+        return (self.Salary*0.81)
+    #Class Method
+    @classmethod
+    def myID(cls):
+        return cls.ID #Accessible without creating an object
+    @staticmethod
+    def paycommission():
+        if Salary>120,000 and Salary<320,000:
+            return "7th"
+        elif Salary<=120,000:
+            return "6th"
+        else:
+            return "8th"
+    
+
+    
+    
  
