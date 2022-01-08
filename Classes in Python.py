@@ -74,9 +74,15 @@ print(Yash._Job__place)'''
         elif Salary<=120,000:
             return "6th"
         else:
-            return "8th"
-    
-
-    
-    
- 
+            return "8th"    
+#Encapsulation
+class PwdManager:
+    def __init__(self,ID,Pwd):
+        self.__ID=ID
+        self.__Pwd=Pwd
+    def login(self,ID,Pwd):
+        if (self.__ID==ID) and (self.__Pwd==Pwd):
+            print("Access Granted")
+        else:
+            print("Access Denied")
+#However, using _PwdManager__ID/Pwd method on object, credentials can be known
