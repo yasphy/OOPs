@@ -86,3 +86,38 @@ class PwdManager:
         else:
             print("Access Denied")
 #However, using _PwdManager__ID/Pwd method on object, credentials can be known
+#Inheritance
+#Parent Class
+class Job:
+    Qt="Budh"
+    def __init__(self,ID=None,Salary=None,place=None):
+        self.ID=ID
+        self.Salary=Salary
+        #By default, all the python attributes are public but can be made private specifically and can't be accessed outside the class
+        self.__place=place #Private attribute
+    def inhand():
+        return (self.Salary*0.81)
+    #Class Method
+    @classmethod
+    def myID(cls):
+        return cls.Qt #Accessible without creating an object
+    @staticmethod
+    def paycommission(Salary):
+        if Salary>120000 and Salary<320000:
+            return "7th"
+        elif Salary<=120000:
+            return "6th"
+        else:
+            return "8th"    
+#Child class
+class Employee(Job):
+    def __init__(self,ID,Salary,Name):
+        #Using the super() function
+        super().__init__(ID,Salary)
+        #Job.__init__(self,ID,Salary)
+        self.Name=Name
+    def printname(self):
+        print(self.name)
+    def nameandID(self):
+        print("Name is",self.Name)
+        print("ID is",self.ID)
