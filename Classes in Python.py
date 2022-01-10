@@ -121,3 +121,42 @@ class Employee(Job):
     def nameandID(self):
         print("Name is",self.Name)
         print("ID is",self.ID)
+#Polymorphism
+class functions:
+    def __init__(self,domain,Range,Type):
+        self.domain=domain
+        self.Range=Range
+        self.Type=Type
+    def finddomain(self):
+        return self.domain
+class Constant(functions):
+    def __init__(self,Range,number):
+        super().__init__(Range)
+        self.number=number
+    def finddomain(self):
+        return "All Real Numbers"
+#Abstract Base Class Implementation
+from abc import ABC,abstractmethod
+
+class Shape(ABC):  # Shape is a child class of ABC
+    @abstractmethod
+    def area(self):
+        pass
+
+    @abstractmethod
+    def perimeter(self):
+        pass
+
+
+class Square(Shape):
+    def __init__(self, length):
+        self.length = length
+
+
+#shape = Shape()
+# this code will not compile since Shape has abstract methods without
+# method definitions in it
+#square = Square(4)
+# this will code will not compile since abstarct methods have not been
+# defined in the child class, Square    
+        
